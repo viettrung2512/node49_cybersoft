@@ -133,7 +133,7 @@ CREATE TABLE `Chats` (
 	`userId` int NOT NULL,
 	`roomId` VARCHAR(255) NOT NULL,
 	
-	FOREIGN KEY (`userIdSender`) REFERENCES Users (`id`),
+	FOREIGN KEY (`userId`) REFERENCES Users (`id`),
 	
 	-- mặc định luôn luôn có
 	`deletedBy` INT NOT NULL DEFAULT 0,
@@ -142,6 +142,7 @@ CREATE TABLE `Chats` (
 	`createdAt` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	`updatedAt` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+
 
 
 
